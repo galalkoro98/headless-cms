@@ -5,18 +5,19 @@
 import "./qs.js";
 async function ex1() {
   const query = qs.stringify(
-  {
-      _
-  }, 
-  {
-    encodeValuesOnly: true,
-  });
+    {
+      fields: ["name"],
+      sort: ["name:asc"],
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
   console.log("The query string", query);
 
-  // call the matching endpoint and include the querystring after the ?
-  const baseUrl = _;
-  const response = await fetch(`${_}?${query}`);
+  const baseUrl = "http://localhost:1337/api/products";
+  const response = await fetch(`${baseUrl}?${query}`);
   const result = await response.json();
-  _
+  console.log(result.data.map((product) => product.attributes.name).join("\n"));
 }
 ex1();

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,52 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Name Search Exercise</title>
 </head>
+
 <body>
     <main class="main">
-    <header>
-        <nav class="navbar">
-            <h1>Web Shop</h1>
-            <div class="navbar__logo">
-                <img src="./img/logo.jpg" />
+        <header>
+            <nav class="navbar">
+                <h1>Web Shop</h1>
+                <div class="navbar__logo">
+                    <img src="./img/logo.jpg" />
+                </div>
+                <div class="navbar__links">
+                    <a href="./home.html">Home</a>
+                    <a href="./index.html">intro</a>
+                    <a href="./allNames.html">All Names</a>
+                    <a href="./nameSearch.html">Name Search</a>
+                    <a href="./totalPrice.html">Total Price</a>
+                    <a href="./totalPriceImproved.html">Total Price Improved</a>
+                    <a href="./totalPriceComplate.html">Total Price Complete</a>
+                    <a href="./mostExpensive.html">Most expensive</a>
+                </div>
+            </nav>
+        </header>
+        <div class="container__search__name">
+            <div class="container__content">
+                <h1 class=".title__search__name">Serach Product Name</h1>
+                <div class="container__content__products">
+                    <div class="container__content__products__product">
+                        <span class="search__names__span">TV Search</span>
+                        <input class="input__search__name" type="text" id="search__name"
+                            placeholder="searches for products whose name contains letters ">
+                    </div>
+                </div>
+                <div class="container__content__result">
+                    <ul id="list__result">
+                        
+                    </ul>
+                    
+                    
+                </div>
+                <div class="error__message"></divc>
             </div>
-            <div class="navbar__links">
-                <a href="./home.html">Home</a>
-                <a href="./index.html">intro</a>
-                <a href="./allNames.html">All Names</a>
-                <a href="./nameSearch.html">Name Search</a>
-                <a href="./totalPrice.html">Total Price</a>
-                <a href="./totalPriceImproved.html">Total Price Improved</a>
-                <a href="./totalPriceComplate.html">Total Price Complete</a>
-                <a href="./mostExpensive.html">Most expensive</a>
-            </div>
-        </nav>
-    </header>
-</main>
+    </main>
   
-    
+   
+
+    <script src="script/qs.js"></script>
+    <script src="./script/nameSearch.js"></script>
 </body>
+
 </html>

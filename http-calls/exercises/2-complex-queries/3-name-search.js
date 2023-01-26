@@ -5,21 +5,18 @@
 
 import "./qs.js";
 async function searchProductByName(nameStr) {
-  const query = qs.stringify(
-    {
-      fields: ["name"],
-      sort: ["name:asc"],
-      filter: {
-        name: {
-          contains: nameStr,
-        },
+  const query = qs.stringify({
+    // searches for products whose name contains the string that is passed as nameStr
+    fields: ["name"],
+    sort: ["name:asc"],
+    filters: {
+      name: {
+        $contains: nameStr,
       },
     },
 
-    {
-      encodeValuesOnly: true,
-    }
-  );
+    encodeValuesOnly: true,
+  });
   console.log("The query string", query);
 
   const baseUrl = "http://localhost:1337/api/products";

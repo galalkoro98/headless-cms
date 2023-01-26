@@ -3,9 +3,9 @@ async function searchProductByName(nameStr) {
     {
       fields: ["name"],
       sort: ["name:asc"],
-      filter: {
+      filters: {
         name: {
-          contains: nameStr,
+          $contains: nameStr,
         },
       },
     },
@@ -44,6 +44,7 @@ const renderResults = (results) => {
 let searchTimeoutToken = 0;
 window.onload = () => {
   const searchInput = document.getElementById("search__name");
+  const errorMessage = document.getElementById("error__message");
   searchInput.onkeyup = (event) => {
     if (
       event.key === "ArrowUp" ||
@@ -52,12 +53,21 @@ window.onload = () => {
     ) {
       return;
     }
+
+    if (event.key === "Backspace" && searchInput.value.length === 0) {
+      errorMessage.innerHTML =
+        "Please enter at least one character to search for";
+      return;
+    } else {
+      errorMessage.innerHTML = "";
+    }
+
     if (searchTimeoutToken) {
       clearTimeout(searchTimeoutToken);
     }
 
     searchTimeoutToken = setTimeout(() => {
       searchProductByName(searchInput.value);
-    }, 1000);
+    }, 250);
   };
 };

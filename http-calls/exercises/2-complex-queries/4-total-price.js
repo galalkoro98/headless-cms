@@ -12,7 +12,7 @@ async function ex4() {
 
       fields: ["price"],
       sort: ["price:asc"],
-      filter: {
+      filters: {
         price: {
           gt: 0,
         },
@@ -28,7 +28,7 @@ async function ex4() {
           },
 
           // ignoring whether it is in stock or not and not applying any discount
-          filter: {
+          filters: {
             price: {
               gt: 0,
             },

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,61 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Total Price Exercise </title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <h1>Web Shop</h1>
-            <div class="navbar__logo">
-                <img src="./img/logo.jpg" />
-            </div>
-            <div class="navbar__links">
-                <a href="./home.html">Home</a>
-                <a href="./index.html">intro</a>
-                <a href="./allNames.html">All Names</a>
-                <a href="./nameSearch.html">Name Search</a>
-                <a href="./totalPrice.html">Total Price</a>
-                <a href="./totalPriceImproved.html">Total Price Improved</a>
-                <a href="./totalPriceComplate.html">Total Price Complete</a>
-                <a href="./mostExpensive.html">Most expensive</a>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="container__content">
-            <h1>Total Price</h1>
-            <p>Calculate the total price of all products</p>
-            <div class="container__content__form">
-                <form action="http://localhost:3000/totalPrice" method="GET">
-                    <button type="submit">Calculate</button>
-                </form>
+    <main class="main">
+        <header>
+            <nav class="navbar">
+                <h1>Web Shop</h1>
+                <div class="navbar__logo">
+                    <img src="./img/logo.jpg" />
+                </div>
+                <div class="navbar__links">
+                    <a href="./home.html">Home</a>
+                    <a href="./index.html">intro</a>
+                    <a href="./allNames.html">All Names</a>
+                    <a href="./nameSearch.html">Name Search</a>
+                    <a href="./totalPrice.html">Total Price</a>
+                    <a href="./totalPriceImproved.html">Total Price Improved</a>
+                    <a href="./totalPriceComplate.html">Total Price Complete</a>
+                    <a href="./mostExpensive.html">Most expensive</a>
+                </div>
+            </nav>
+        </header>
+        <div class="container__total__price">
+            <div class="container__content__total__price">
+                <h1>Total Price</h1>
+                <p>Calculate the total price of all products</p>
+                <div class="array__prices">
+                    <p id="array__prices"></p>
+                </div>
+                <div class="container__content__form__total__price">
+                    <form>
+                        <input id="calculate" type="button" value="calculate"/>
+                    </form>
+                </div>
+                <div class="container__content__result__total__price">
+                    <p id="total__price"></p>
+
+                </div>
             </div>
         </div>
-    </div>
-    
+
+        <footer>
+            <div class="footer__content">
+                <p>© 2023 Webshop</p>
+            </div>
+        </footer>
+    </main>
+
+
+
+
+
+
+
+    <script src="./script/qs.js"></script>
+    <script src="./script/total__price.js"></script>
 </body>
+
 </html>

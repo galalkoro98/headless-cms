@@ -1,6 +1,7 @@
 @import './intro';
 @import './allNames';
 @import './nameSearch';
+@import './totalPrice';
 
 
 // header & navbar, main
@@ -54,4 +55,35 @@
 
 .navbar__logo img {
     width: 100%;
+}
+
+.navbar__logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__logo a:hover {
+    background-color: #555;
+}
+
+
+// media query
+
+@media screen and (max-width: 768px) {
+    .navbar__links {
+        display: none;
+    }
+
+    .navbar__logo {
+        width: 50px;
+    }
+
+    .navbar__logo img {
+        width: 100%;
+    }
+
+    .navbar__logo a {
+        color: white;
+        text-decoration: none;
+    }
 }

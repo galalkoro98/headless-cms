@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,59 +8,59 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Total Price Improved Exercise</title>
 </head>
+
 <body>
     <main class="main">
-    <header>
-        <nav class="navbar">
-            <h1>Web Shop</h1>
-            <div class="navbar__logo">
-                <img src="./img/logo.jpg" />
+        <header>
+            <nav class="navbar">
+                <h1>Web Shop</h1>
+                <div class="navbar__logo">
+                    <img src="./img/logo.jpg" />
+                </div>
+                <div class="navbar__links">
+                    <a href="./home.html">Home</a>
+                    <a href="./index.html">intro</a>
+                    <a href="./allNames.html">All Names</a>
+                    <a href="./nameSearch.html">Name Search</a>
+                    <a href="./totalPrice.html">Total Price</a>
+                    <a href="./totalPriceImproved.html">Total Price Improved</a>
+                    <a href="./totalPriceComplate.html">Total Price Complete</a>
+                    <a href="./mostExpensive.html">Most expensive</a>
+                </div>
+            </nav>
+        </header>
+        <div class="container__total__price__improved">
+            <div class="container__total__price__improved__card">
+                <h1 class="total__price__improved__title">Total Price Improved</h1>
+                <div class="container__total__price__improved__content">
+                    <div class="array__total__price__improved"></div>
+                    <input type="submit" value="calculate" id="calculate__total__price__improved">
+
+                </div>
+                <div class="container__total__price__improved__result">
+
+                </div>
+
             </div>
-            <div class="navbar__links">
-                <a href="./home.html">Home</a>
-                <a href="./index.html">intro</a>
-                <a href="./allNames.html">All Names</a>
-                <a href="./nameSearch.html">Name Search</a>
-                <a href="./totalPrice.html">Total Price</a>
-                <a href="./totalPriceImproved.html">Total Price Improved</a>
-                <a href="./totalPriceComplate.html">Total Price Complete</a>
-                <a href="./mostExpensive.html">Most expensive</a>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="container__left">
-            <h2>Search for a product</h2>
-            <form action="http://localhost:3000/totalPriceImproved" method="POST">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
-                <button type="submit">Search</button>
-            </form>
         </div>
-        <div class="container__right">
-            <h2>Result</h2>
-            <div class="result">
-                <p id="result"></p>
-            </div>
-        </div>
-    </div>
     </main>
-    <!-- <script>
-        const form = document.querySelector('form');
-        const result = document.querySelector('#result');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.querySelector('#name').value;
-            fetch(`http://localhost:3000/totalPriceImproved?name=${name}`)
-                .then((res) => res.json())
-                .then((data) => {
-                    result.innerHTML = data;
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
-        });
-    </script> -->
+
+    <style>
+        /* container__total__price__improved__card */
     
+
+
+
+    </style>
+
+
+
+
+
+
+
+    <script src="script/qs.js"></script>
+    <script src="./script/totalPriceImproved.js"></script>
 </body>
+
 </html>

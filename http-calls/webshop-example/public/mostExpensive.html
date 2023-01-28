@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,39 +8,51 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Most expensive Exercise</title>
 </head>
+
 <body>
     <main class="main">
-    <header>
-        <nav class="navbar">
-            <h1>Web Shop</h1>
-            <div class="navbar__logo">
-                <img src="./img/logo.jpg" />
-            </div>
-            <div class="navbar__links">
-                <a href="./home.html">Home</a>
-                <a href="./index.html">intro</a>
-                <a href="./allNames.html">All Names</a>
-                <a href="./nameSearch.html">Name Search</a>
-                <a href="./totalPrice.html">Total Price</a>
-                <a href="./totalPriceImproved.html">Total Price Improved</a>
-                <a href="./totalPriceComplate.html">Total Price Complete</a>
-                <a href="./mostExpensive.html">Most expensive</a>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="container__content">
-            <h1>Most expensive</h1>
-            <div class="container__content__products">
-                <div class="container__content__products__product">
-                    <h2>Product Name</h2>
-                    <p>Price: 0</p>
+        <header>
+            <nav class="navbar">
+                <h1>Web Shop</h1>
+                <div class="navbar__logo">
+                    <img src="./img/logo.jpg" />
+                </div>
+                <div class="navbar__links">
+                    <a href="./home.html">Home</a>
+                    <a href="./index.html">intro</a>
+                    <a href="./allNames.html">All Names</a>
+                    <a href="./nameSearch.html">Name Search</a>
+                    <a href="./totalPrice.html">Total Price</a>
+                    <a href="./totalPriceImproved.html">Total Price Improved</a>
+                    <a href="./totalPriceComplate.html">Total Price Complete</a>
+                    <a href="./mostExpensive.html">Most expensive</a>
+                </div>
+            </nav>
+        </header>
+        <div class="container__search__name__most__expensive">
+            <div class="container__content__most__expensive">
+                <h1 class="title__search__name__most__expensive">Most Expensive Name</h1>
+                <div class="container__content__most__expensive__product">
+                    <div class="container__content__most__expensive__products__product">
+                        <span class="search__names__span__most__expensive">TV Search</span>
+                        <input class="input__search__name__most__expensive" type="text" id="search__name__most__expensive"
+                            placeholder="search product name that are most expensive">
+                    </div>
+                </div>
+                <div class="container__content__result__most__expensive">
+                    <div id="list__result__most__expensive">
+                    </div>
+                    <div class="error__message__most__expensive" id="error__message__expensive"></div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-    
+   
+
+
+    <script src="./script/qs.js"></script>
+    <script src="./script/mostExpensive.js"></script>
 </body>
+
 </html>
